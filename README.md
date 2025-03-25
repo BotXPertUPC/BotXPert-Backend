@@ -46,7 +46,7 @@ cat ~/.ssh/id_ed25519.pub
 
 5. Torna a GitHub, copia l’enllaç **SSH** del repositori i clona’l a PyCharm o amb:
 ```
-git clone git@github.com:<usuari>/BotXPert-Backend.git
+git clone git@github.com:BotXPertUPC/BotXPert-Backend.git
 ```
 ⚠️ Si et demana:
 ```
