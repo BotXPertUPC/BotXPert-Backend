@@ -1,0 +1,19 @@
+# Entorn virtual
+.venv/
+venv/
+
+# Fitxers temporals i compilats
+__pycache__/
+*.py[cod]
+*.log
+
+# Fitxers de base de dades local
+*.sqlite3
+
+# Fitxers de configuració de l'IDE
+.idea/
+.vscode/
+
+# Migracions buides o temporals
+*/migrations/__pycache__/
+*.pyc
