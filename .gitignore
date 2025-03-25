@@ -1,6 +1,8 @@
 # Entorn virtual
 .venv/
 venv/
+.env
+.env.prod
 
 # Fitxers temporals i compilats
 __pycache__/
