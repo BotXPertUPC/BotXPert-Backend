@@ -13,7 +13,10 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-load_dotenv()
+if Path(".env.prod").exists():
+    load_dotenv(dotenv_path=".env.prod")
+else:
+    load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
