@@ -114,3 +114,22 @@ INSTALLED_APPS = [
     'main',
     'nom_app',  # Afegeix la teva nova aplicació aquí
 ]
+```
+## 🚀 Desplegament en producció
+
+Per desplegar el projecte al servidor de producció:
+
+1. Connecta’t per SSH a la màquina virtual:
+```bash
+ssh root@187.33.149.121
+```
+2. Executa el script de desplegament:
+```bash
+./start.sh
+```
+Aquest script actualitza el codi (git pull) i arrenca el contenidor de Docker en segon pla.
+
+### 🛑 Aturar el backend
+```bash
+./stop.sh
+```
