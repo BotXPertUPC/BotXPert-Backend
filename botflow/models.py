@@ -26,7 +26,7 @@ class Node(models.Model):
         LIST = 'LIST', 'List'
         END = 'END', 'End'
 
-    id = models.IntegerField(primary_key=True, max_length=100)
+    id = models.IntegerField(primary_key=True)
     bot_flow = models.ForeignKey('BotFlow', on_delete=models.CASCADE, related_name='nodes')
     type = models.CharField(max_length=50, choices=NodeType.choices)
     text = models.TextField(blank=True, null=True)
