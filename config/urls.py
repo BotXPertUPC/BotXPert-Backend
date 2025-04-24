@@ -15,8 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.http import HttpResponse
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 def home(request):
     return HttpResponse("BotXPert backend està funcionant!")
@@ -24,4 +25,8 @@ def home(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('api/', include('botflow.urls')),
+
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
