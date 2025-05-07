@@ -19,6 +19,7 @@ class NodeSerializer(serializers.ModelSerializer):
             'id', 'bot_flow', 'type', 'text', 'position_x', 'position_y',
             'list_header', 'next_node', 'list_options'
         ]
+        extra_kwargs = {'bot_flow': {'required': False}}
 
 
 class BotFlowSerializer(serializers.ModelSerializer):
