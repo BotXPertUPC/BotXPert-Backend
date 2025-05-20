@@ -23,6 +23,9 @@ class Node(models.Model):
     class NodeType(models.TextChoices):
         START = 'START', 'Start'
         TEXT = 'TEXT', 'Text'
+        IMAGE = 'IMAGE', 'Image'
+        FILE = 'FILE', 'File'
+        ANSWER = 'ANSWER', 'Answer'
         LIST = 'LIST', 'List'
         END = 'END', 'End'
 
@@ -30,6 +33,8 @@ class Node(models.Model):
     bot_flow = models.ForeignKey('BotFlow', on_delete=models.CASCADE, related_name='nodes')
     type = models.CharField(max_length=50, choices=NodeType.choices)
     text = models.TextField(blank=True, null=True)
+    image_url = models.URLField(blank=True, null=True)
+    file_url = models.URLField(blank=True, null=True)
     position_x = models.FloatField(null=True, blank=True)
     position_y = models.FloatField(null=True, blank=True)
     list_header = models.CharField(max_length=255, blank=True, null=True)
