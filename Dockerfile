@@ -21,9 +21,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiem el codi
 COPY . .
 
-# Compilem assets estàtics
-RUN python manage.py collectstatic --noinput
-
 # Exposem el port
 EXPOSE 8000
 
