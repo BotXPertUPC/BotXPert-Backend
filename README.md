@@ -1,3 +1,9 @@
+# Autors
+Anyer Moreno \
+Andreu Sabater \
+Maria Salvat \
+Arnau Ventura 
+
 # 🤖 BotXPert - Backend
 
 **BotXPert** és un projecte per automatitzar la creació de bots per a Whatsapp. Aquest repositori conté la infraestructura per executar, desenvolupar i provar el sistema.
